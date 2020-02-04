@@ -17,5 +17,38 @@
   "pygments_lexer": "ipython3",
   "version": 3
  },
- "cells": []
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#Guide 1 - Chapters 1 and 2\n",
+    "\n",
+    "### Describe:\n",
+    " - Russell & Norvig’s four-part definition of Artificial Intelligence (AI).\n",
+    "   \n",
+    " - The Turing Test - a test of AI that passes if the human interrogator cannot tell if their partner is human or a computer. This requires:\n",
+    "      - **natural language** processing to communicate\n",
+    "      - **knowledge representation** to store what it learns\n",
+    "      - **automated reasoning** to use stored information and draw new conclusions\n",
+    "      - **machine learning** to adapt and detect and extrapolate patterns\n",
+    "\n",
+    "### When was the field of AI born and who were the founding researchers?\n",
+    "\n",
+    "### Describe:\n",
+    " - Physical Symbol System hypothesis\n",
+    " - Expert Systems\n",
+    " - Symbolic vs. Logicist vs. Connectionist models\n",
+    " \n",
+    "### Describe:\n",
+    " - Rational Agents:  A rational agent is an agent that acts to maximize its performance measure, given evidence and built-in knowledge.\n",
+    " - Performance Environment Actuators Sensors descriptions: \n",
+    "   \n",
+    " - the dimensions along which we can categorize task environments\n",
+    "    Understand the vacuum world.\n"
+   ]
+  }
+ ]
 }
