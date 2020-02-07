@@ -1,2 +1,7 @@
 i. The GPS problem solver is implemented as a function.
-ii. 
+ii. dictionaries
+iii. Yes it uses recursion. achieve_all() calls achieve() which calls apply_operator that calls achieve_all again
+
+Monkeys
+i. Monkey and banana problem
+ii. The monkey has a ball and drops it to get the bananas instead of hitting it with the stick from the original problem
