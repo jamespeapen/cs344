@@ -4,4 +4,8 @@ iii. Yes it uses recursion. achieve_all() calls achieve() which calls apply_oper
 
 Monkeys
 i. Monkey and banana problem
-ii. The monkey has a ball and drops it to get the bananas instead of hitting it with the stick from the original problem
+ii. The code doesn't use a stick that the original problem has. The monkey has a ball and drops it to get the bananas instead of hitting it with the stick from the original problem.
+iii. The instructions are to push the chair to the middle, climb on it, drop the ball, grasp bananas and eat bananas.
+The GPS starts at the goal state and recursively searches for the conditions and actions that take it to the start state. It then traces the path to the goal state and prints the actions that worked.
+iv. Thinking rationally and acting rationally
+v. Yes
