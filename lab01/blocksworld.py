@@ -3,6 +3,10 @@ from gps import gps
 problem = {
     "start1": ["space on a", "a on b", "b on c", "c on table", "space on table"],
     "finish1": ["space on c", "c on b", "b on a", "a on table", "space on table"],
+    "start_a": [ "space on table", "b on table", "space on c", "c on a", "a on table"],
+    "finish_a": ["b on table", "a on table", "c on table"],
+    "start_b": ["space on a", "a on table", "space on b", "b on table", "space on c", "c on table"],
+    "finish_b": ["space on a", "a on b", "b on c", "c on table", "space on table"],
 
     # settings for the Sussman Anamoly, see PAIP, pp. 142. 
     "sussmanStart": ["space on c", "c on a", "a on table", "b on table", "space on table"],
@@ -289,8 +293,8 @@ problem = {
 }
 #
 def main():
-    start = problem['start1']
-    finish = problem['finish1']
+    start = problem['start_a']
+    finish = problem['finish_a']
     ops = problem['ops']
     actionSequence = gps(start, finish, ops)
     if actionSequence is None:
