@@ -5,7 +5,7 @@ problem = {
     "finish1": ["space on c", "c on b", "b on a", "a on table", "space on table"],
 
     "start_a": [ "space on table", "b on table", "space on c", "c on a", "a on table"],
-    "finish_a": ["b on table", "a on table", "c on table"],
+    "finish_a": ["c on table", "space on c", "a on table", "space on a", "b on table", "space on c"],
 
     "start_b": ["space on a", "a on table", "space on b", "b on table", "space on c", "c on table"],
     "finish_b": ["c on table", "b on c", "a on b", "space on a"],
@@ -295,8 +295,8 @@ problem = {
 }
 #
 def main():
-    start = problem['start_b']
-    finish = problem['finish_b']
+    start = problem['start_a']
+    finish = problem['finish_a']
     ops = problem['ops']
     actionSequence = gps(start, finish, ops)
     if actionSequence is None:
