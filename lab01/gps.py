@@ -145,4 +145,4 @@ def apply_operator(operator, states, ops, goal, goal_stack):
 import logging
 
 def debug(level, msg):
-    logging.debug(' %s %s' % (level * '  ', msg))
+    logging.warning(' %s %s' % (level * '  ', msg))
