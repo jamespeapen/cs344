@@ -1,0 +1,2 @@
+a. Hill-climbing solution, simulated annealing
+
