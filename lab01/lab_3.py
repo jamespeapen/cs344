@@ -45,8 +45,8 @@ problem = {
         {
             "action": "deploy parachute",
             "preconds": [
+                "has parachute",
                 "in air",
-                "has parachute"
             ],
             "add": [
                 "parachute deployed",
@@ -58,8 +58,8 @@ problem = {
         {
             "action": "get parachute",
             "preconds": [
+                "no parachute",
                 "on cliff",
-                "no parachute"
             ],
             "add": [
                 "has parachute",
