@@ -1,2 +1,13 @@
 a. Hill-climbing solution, simulated annealing
 
+b. Both algorithms seem to work at the same speed.
+
+c. The starting value does not seem to make a difference in the solution values. There is only one maximum and random starting values don't affect the algorithm's ability to find it. 
+
+d. After changing the delta to 0.1, hill climbing value was closer to the maximum than the simluated annealing. Reducing the delta further to 0.01 shows similar results with hill-climbing getting better results than simulated annealing. The delta value controls the range that th e search function is allowed to search in. A lower delta prevents simulated annealing from finding the maximum because it is restricted in its search by that small range. Hill-climbing works with that smaller range because it works towards the maximum with that range. 
+
+e. exp_shedule() controls the inital temperature, the maximum temperature and the cooling as the algorithm progresses and maps time to temperature. 
+
+
+
+
