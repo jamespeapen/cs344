@@ -1,3 +1,4 @@
+Ex 2.1
 a. Hill-climbing solution, simulated annealing
 
 b. Both algorithms seem to work at the same speed.
@@ -8,6 +9,12 @@ d. After changing the delta to 0.1, hill climbing value was closer to the maximu
 
 e. exp_shedule() controls the inital temperature, the maximum temperature and the cooling as the algorithm progresses and maps time to temperature. 
 
+Ex 2.2
+a. Simulated annealing seems to do better. There are cases when the inital value is low and this makes simulated annealing get negative values as its solutions. Otherwise, simulated annealing gets closer to the goal state than hill-climbing. 
 
+b. The starting value affects hill-climbing more than simulated annealing. Simulated annealing is less affected by the randomness of the starting value but is not fully immune to it.  
 
+c. Hill-climbing does better and closer to simulated annealing with a dela of 0.1. At a delta of 0.01, simulated annealing starting getting worse than hill-climbing.
+When the delta is larger than 1, simulated annealing gets values higher than the maximum. Hill-climbing not seem to get better with higher deltas.
 
+d. The minimum value is 0 and the max is 30. Simulated annealing is more consistently close to the max than hill climbing but sometimes gets furthers away by giving negative values. 
