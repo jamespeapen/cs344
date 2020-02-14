@@ -17,4 +17,14 @@ b. The starting value affects hill-climbing more than simulated annealing. Simul
 c. Hill-climbing does better and closer to simulated annealing with a dela of 0.1. At a delta of 0.01, simulated annealing starting getting worse than hill-climbing.
 When the delta is larger than 1, simulated annealing gets values higher than the maximum. Hill-climbing not seem to get better with higher deltas.
 
-d. The minimum value is 0 and the max is 30. Simulated annealing is more consistently close to the max than hill climbing but sometimes gets furthers away by giving negative values. 
+d. The minimum value is 0 and the max is 30. Simulated annealing is more consistently close to the max than hill climbing but sometimes gets further away by giving negative values. 
+
+Ex. 2.3
+
+a. Simulated annealing tends to get values higher than the maximum possible goal when run in random restarts. Random restart hill-climbing gets closer to the goal more consistently with random restarts than without it. 
+
+b. On one run with 100 restarts, random restart hill-climbing had an average x of 17.8 and value of 16.6. 
+
+Random restart simulated annealing had an average x of 19.2 and value of 11. 
+
+c. Simulated annealing seems to do better than hill-climbing but does not stay within the range allowed by the problem. Hill-climbing with 100 restarts consitently got to the max value. 
