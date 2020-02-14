@@ -27,4 +27,9 @@ b. On one run with 100 restarts, random restart hill-climbing had an average x o
 
 Random restart simulated annealing had an average x of 19.2 and value of 11. 
 
-c. Simulated annealing seems to do better than hill-climbing but does not stay within the range allowed by the problem. Hill-climbing with 100 restarts consitently got to the max value. 
+c. Simulated annealing seems to do better than hill-climbing but does not stay within the range allowed by the problem. Hill-climbing with 100 restarts consitently got to the max value. It is also faster than simulated annealing.
+
+Ex 2.4
+a. 
+b. 
+c. They would have to be implemented in parallel and be able to communicate between the threads to provide the best search paths. 
