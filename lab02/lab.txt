@@ -30,6 +30,7 @@ Random restart simulated annealing had an average x of 19.2 and value of 11.
 c. Simulated annealing seems to do better than hill-climbing but does not stay within the range allowed by the problem. Hill-climbing with 100 restarts consitently got to the max value. It is also faster than simulated annealing.
 
 Ex 2.4
-a. 
-b. 
-c. They would have to be implemented in parallel and be able to communicate between the threads to provide the best search paths. 
+a. I think it could be implemented as part of simulated annealing. Simulated annealing uses probability as part of its algorithm and getting information from other searches about better probabilities would improve its searching ability. It could also be implemented as a hill-climbing solution where the final states of the best runs are stored and they become the initial states of the next set of runs. 
+b. The number of solutions that can be maintainted would depend on the capabilities of the computer and the number of threads that the processor can run at a time. Being able to run more threads would allow for more solutions to be maintainted.  
+c. They would have to be implemented in parallel and be able to communicate between the threads to provide the best search paths. When some threads find a better, they pass the information to the other threads and prune out the poorer search directions. 
+Random restarts are random in their starting location and do not use the information from other searches to guide further iterations. It has no pruning element that narrows the field of the search. 
