@@ -1,0 +1,36 @@
+3.1
+a. Easy:
+Depth-first search: fail
+AC3: solves quickly
+backtracking_search: solves, slowly
+min_conflicts: fail
+
+hard-aima:
+depth_first_graph_search: took too long to finish
+AC3: failed quickly
+backtracking_search with mrv and forward_checking: solved quickly
+backtracking_search: took too long to finish
+min_conflicts: failed slowly
+
+hardest_escargot:
+AC3: failed 
+backtracking_search with mrv and forward_checking: solved quickly
+
+b. With forward_checking, backtracking_search solved the easy puzzle quickly. With mrv enabled, it solves it quickly. With both enabled, three is no noticable increase in speed. 
+With harder_aima_csp, it failed quickly.
+
+3.2
+a. n = 8
+AC3: failed
+backtracking_search: solved with all backtracking_search settings
+min_conflicts: solved
+
+n = 2failed
+AC3: 
+backtracking_search: with default settings: solved with a delay
+	with mrv and forward_checking: solved with a smaller delay
+min_conflicts: solved quickly
+
+b. Backtracking works best with the minimum remaining values and forward_checking enabled. These settings allow it to 
+
+c. Min-conflicts requires 
