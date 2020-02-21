@@ -25,7 +25,7 @@ AC3: failed
 backtracking_search: solved with all backtracking_search settings
 min_conflicts: solved
 
-n = 2failed
+n = 20 
 AC3: 
 backtracking_search: with default settings: solved with a delay
 	with mrv and forward_checking: solved with a smaller delay
@@ -33,4 +33,9 @@ min_conflicts: solved quickly
 
 b. Backtracking works best with the minimum remaining values and forward_checking enabled. These settings allow it to 
 
+n = 100
+backtracking_search: works only with both mrv and forward_checking
+min_conflicts: solved
+
 c. Min-conflicts requires 
+
