@@ -38,7 +38,14 @@ n = 100
 	backtracking_search: works only with both mrv and forward_checking
 	min_conflicts: solved
 
-b. Backtracking works best with the minimum remaining values and forward_checking enabled. These settings allow it to 
+b. Backtracking works best with the minimum remaining values and forward_checking enabled. These settings allow it to pick the variable that produces the fewest possible remaining values, speeding up the search. Forward checking looks ahead of the current step to check for consitency and chooses the best option based on that. These techniques improve search time and accuracy.  
 
-c. Min-conflicts requires 
+c. Min-conflicts requires 3.3
+a. Traditional search has a start and goal state and a result. These are numerical and the search attempts to find the value closest to the goal state. Search actions involve progressively selecting states that get closer to the goal. This could be random searching that narrows its range as it gets closer or a search that finds cloer values until can no longer find them. 
 
+CSP also has a start and goal state. Each variable has domains of its variables and the states they can be in as well as constraints on the possible values of those variables. Using these constraints, CSP problem solvers find solutions by following possible routes and their constraints, eliminating solutions that do not fit the constraints, and returning a result that is consistent with the constraints. The domains and results are expressed as conditions and not as numeric values. 
+ 
+CSP also has a start and goal state. Each variable has domains of its variables and the states they can be in as well as constraints on the possible values of those variables. Using these constraints, CSP problem solvers find solutions by following possible routes and their constraints, eliminating solutions that do not fit the constraints, and returning a result that is consistent with the constraints. The domains and results are expressed as conditions and are found using implementations of each variable and its possible values and the values of other variables that are connected with it.
+
+b. Traditional seaerch looks for the value closest to the problem's goal state. Hill-climbing and simulated annealing try to find the best match by either only going closer or by randomly assigning inital states and narrowing down the search space. The heuristic works by checking how close the current state is with the goal state.
+Constraint satisfaction solving also has a goal state that is checked, but it may be one that is unknown. The constraints are used to arrive at the solution and checking involves making sure that the current state is within the specified constraints. There may also be multiple goal states if multiple states satisfy the constraints.
