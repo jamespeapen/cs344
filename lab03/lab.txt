@@ -15,7 +15,7 @@ hard-aima:
 hardest_escargot:
 	AC3: failed 
 	backtracking_search with mrv and forward_checking: solved quickly
-	min_conflicts: 
+	min_conflicts: failed 
 
 Sudoku gets harder with increases in the number of different path constraints that need to be considered. The easy puzzle only has the fewest paths and so can easily be solved by AC3 and the default backtracking_search. As the search space gets larger, and the number of paths increases, AC3 fails to find a solution. Backtracking uses a depth_first_graph_search, but also uses inference to select the paths to follow. With minimum remaining values enabled, backtracking_search is able to narrow down the search space and find a solution faster. 
 
@@ -40,7 +40,9 @@ n = 100
 
 b. Backtracking works best with the minimum remaining values and forward_checking enabled. These settings allow it to pick the variable that produces the fewest possible remaining values, speeding up the search. Forward checking looks ahead of the current step to check for consitency and chooses the best option based on that. These techniques improve search time and accuracy.  
 
-c. Min-conflicts requires 3.3
+c. Min-conflicts has a default max of 10000 steps. While running it with different sudoku difficulties and with the zebra problem, it failed and so I couldn't get the number of steps it took. 
+
+3.3
 a. Traditional search has a start and goal state and a result. These are numerical and the search attempts to find the value closest to the goal state. Search actions involve progressively selecting states that get closer to the goal. This could be random searching that narrows its range as it gets closer or a search that finds cloer values until can no longer find them. 
 
 CSP also has a start and goal state. Each variable has domains of its variables and the states they can be in as well as constraints on the possible values of those variables. Using these constraints, CSP problem solvers find solutions by following possible routes and their constraints, eliminating solutions that do not fit the constraints, and returning a result that is consistent with the constraints. The domains and results are expressed as conditions and not as numeric values. 
