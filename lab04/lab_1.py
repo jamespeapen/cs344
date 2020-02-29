@@ -1,4 +1,17 @@
+''''
+This module implements a simple classroom example of probabilistic inference
+over the full joint distribution specified by AIMA, Figure 13.3.
+It is based on the code from AIMA probability.py.
+
+@author: kvlinden
+@version Jan 1, 2013
 '''
+
+'''
+Lab 4
+@author: James Eapen
+@date: 2020 Feb 28
+
 Ex 4.1b.
 Hand calculation: 
 P(Cavity|Catch) = (P(Catch|Cavity).P(Cavity))/P(Catch)
@@ -16,27 +29,6 @@ c.
 P(Coin2|Coin1 = heads) = 0.5
 '''
 
-'''
-Ex 4.3a.
-
- User  | Non-user
- -----------------
- 0.99  | 0.02
- -----------------
- 0.01  | 0.98
-
-i. P(User)
-
-'''
-
-'''
-This module implements a simple classroom example of probabilistic inference
-over the full joint distribution specified by AIMA, Figure 13.3.
-It is based on the code from AIMA probability.py.
-
-@author: kvlinden
-@version Jan 1, 2013
-'''
 import sys
 sys.path.append("/home/james/Documents/Calvin/CS-344/cs344-code/tools/aima")
 from probability import JointProbDist, enumerate_joint_ask
@@ -60,11 +52,12 @@ print(PC.show_approx())
 PC = enumerate_joint_ask('Cavity', {'Catch': T}, P)
 print(PC.show_approx())
 
+# Compute coin probabilities
 C = JointProbDist(['Coin1', 'Coin2'])
-H, T = 'Heads', 'Tails'
 C['Heads', 'Heads'] = 0.25; C['Tails', 'Tails'] = 0.25
 C['Heads', 'Tails'] = 0.25; C['Tails', 'Heads'] = 0.25
 
-print('P(Coin2|Coin1=heads)')
+print('\nP(Coin2|Coin1=heads)')
 PC = enumerate_joint_ask('Coin2', {'Coin1': 'Heads'}, C)
 print(PC.show_approx())
+
