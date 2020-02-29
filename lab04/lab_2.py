@@ -33,6 +33,7 @@ sys.path.append("/home/james/Documents/Calvin/CS-344/cs344-code/tools/aima")
 from probability import JointProbDist, enumerate_joint_ask
 
 # The Joint Probability Distribution Fig. 13.3 (from AIMA Python)
+# with P(Rain) = 0.5
 P = JointProbDist(['Toothache', 'Cavity', 'Catch', 'Rain'])
 T, F = True, False
 P[T, T, T, T] = 0.054; P[T, T, F, T] = 0.006
@@ -45,7 +46,7 @@ P[F, T, T, F] = 0.036; P[F, T, F, F] = 0.004
 P[T, F, T, F] = 0.008; P[T, F, F, F] = 0.032 
 P[F, F, T, F] = 0.072; P[F, F, F, F] = 0.288 
 
-# Compute P(Cavity|Toothache=T)  (see the text, page 493).
+# Compute P(Toothache|Rain=T)  (see the text, page 493).
 PC = enumerate_joint_ask('Toothache', {'Rain': T}, P)
 print("P(Toothache|Rain):")
 print(PC.show_approx())
