@@ -1,0 +1,61 @@
+Ivanna and James Eapen
+
+6.2
+a. Try it yourself: Framing
+Try to build a model to identify whether an email in Gmail is "important."
+Exercise 1: Start Clearly and Simply
+    We want the machine learned model to be able to identify whether an 
+    email in Gmail is "important."
+Exercise 2: Your Ideal Outcome
+    Our ideal outcome is to suggest emails that should be prioritized in 
+    a user's inbox.
+Exercise 3: Your Success Metrics
+    Our success metric is the number of emails that our model correctly 
+    identifies as being important emails. 
+    Our key results for the success metrics are identifying 
+    at least 90% of all important emails as actually important.
+    Our ML model is deemed a failure if our model fails to 
+    label an email important when it actually was important. 
+Exercise 4: Your Output
+    Maybe a combination between clustering and classification. We want our 
+    model to be able to label an email "important" based on different questions: 
+    whom does the user email and how often? which emails does the user open? 
+    Which emails does the user reply to? What are the keywords that are in 
+    the emails the user usually reads? Which emails does the user star, archive, 
+    or delete?
+    The output is defined as predicting whether the user would consider the received 
+    email important, ensure better communication between users and encourage users 
+    to use the app because of this feature
+Exercise 5: Using the Output
+    We will predict an email's importance when the new email arrives. The outcome 
+    will help determine the algorithm for determining whether the email is important
+Exercise 6: Your Heuristics
+    See which emails the user has starred in the past, and examine who that email was 
+    from, how often the user emailed that person, and then assume that in the future, 
+    the emails received from those senders will be important emails as well.
+
+Exercise 7: 
+a. Your Problem Formulated as an ML Problem
+   Our problem is best framed as an unsupervised clusutering and multi-class single label classification problem that predicts the priority of an email
+b. Cast your Problem as a Simpler Problem
+
+ ___________________________________________________________________________________________________
+|   Sender    |   Starred   |   No. of emails received   |   No. of emails sent   ||     Output     |
+|-------------------------------------------------------------------------------------------------- |
+|   Work      |     Yes     |          320               |           341          ||    Important   |
+|   Parent    |     Yes     |          102               |           100          ||    Important   |
+|   Shopping  |     No      |          205               |           10           ||  Not important |
+ ---------------------------------------------------------------------------------------------------
+
+Exercise 9: Where the Data Comes From
+ ___________________________________________________________________________________________________
+|   Sender       |   Starred   |   No. of emails received |   No. of emails sent   ||     Output   |
+|--------------------------------------------------------------------------------------------------|
+|   Email,       |     Star?   |   Emails received        |  Emails sent to sender ||  		   |
+| contact groups |             |   from sender            |                        ||              |
+ ---------------------------------------------------------------------------------------------------
+
+Exercise 10: Easily Obtained Inputs
+
+Of the variables we want, they are all easy to obtain from the data in the email and counts from the inbox.
+
