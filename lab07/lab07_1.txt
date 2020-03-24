@@ -1,0 +1,11 @@
+Exercise 7.1
+a. cities["bigsaint"] = (cities['Area square miles'] > 50 & cities['City name'].apply(lambda name: name.startswith("San")))
+cities
+
+icities.reindex([3, 0 , 1])
+
+b. Pandas is designed for data manipulation and analysis. The API has features that make modifying data frames, transforming series, getting summary statistics and peeking at data and making changes easy while numpy is more suited to doing computations than data manipulation. 
+
+c. It would be useful to shuffle a data frame if you wanted to randomize a dataset. Randomization might be necessary if the program being tested needs to work with unordered data or run a simulatio that needs randomized data to be reliable.
+
+
