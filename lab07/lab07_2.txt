@@ -1,0 +1,16 @@
+Exercise 7.2
+
+a. 
+
+b. train_model( learning_rate=0.00002, steps=500, batch_size=5)
+
+Final RMSE: 167.23
+
+c. Hyperparameters are parameters that cannot be estimated from the data and
+need to be set before the learning process. They influence the learning and can
+determine how well a model fits the data. There isn't a standard tuning
+algorithm to get a good set of hyperparameters. They need to be set depending
+on the data and the root mean squared error and is more a trial-and-error
+process. 
+
+
