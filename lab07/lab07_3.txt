@@ -1,0 +1,31 @@
+Exercise 7.3
+
+a.  1.  california_housing_dataframe["rooms_per_person"] =
+california_housing_dataframe["total_rooms"]/california_housing_dataframe["population"]
+
+calibration_data = train_model( learning_rate=0.05, steps=500, batch_size=5,
+input_feature="rooms_per_person"
+
+2.  plt.figure(figsize=(15, 6)) plt.subplot(1, 2, 1)
+plt.scatter(calibration_data["predictions"], calibration_data["targets"])
+plt.subplot(1, 2, 2) _ = california_housing_dataframe["rooms_per_person"].hist(
+
+RMSE: 132.43
+
+3.  california_housing_dataframe["clipped_rooms_per_person"] =
+california_housing_dataframe["rooms_per_person"].apply(lambda x: min(x, 10))
+calibration_data = train_model( learning_rate=0.05, steps=500, batch_size=5,
+input_feature="clipped_rooms_per_person")
+
+RMSE: 114.63
+
+b. Synthetic features are features that do not exist in the dataset, but are
+created using the dataset. Using synthetic features allows us to use variables
+not in the original dataset that better capture the goals than the original
+dataset. Variables like densities and rates may be better than raw counts and
+models can use synthetic features to provide better results.
+
+c. Outliers are the extremem minimum and maximum values in the dataset that
+have few counts, but can reduce model perfomance. These are identified with
+histograms and can be clipped to keep only the most representative data points
+and improve the model.
