@@ -1,0 +1,116 @@
+a. 
+------------------------------------------------------
+Task 1
+Examining the data
+The model uses all the variables to learn. 
+
+
+------------------------------------------------------
+Task 2
+Plotting the testing and validation datasets as a map
+
+plt.figure(figsize=(13, 8))
+
+ax = plt.subplot(1, 2, 1)
+ax.set_title("Validation Data")
+
+ax.set_autoscaley_on(False)
+ax.set_ylim([32, 43])
+ax.set_autoscalex_on(False)
+ax.set_xlim([-126, -112])
+plt.scatter(validation_examples["longitude"],
+            validation_examples["latitude"],
+            cmap="coolwarm",
+            c=validation_targets["median_house_value"] / validation_targets["median_house_value"].max())
+
+ax = plt.subplot(1,2,2)
+ax.set_title("Training Data")
+
+ax.set_autoscaley_on(False)
+ax.set_ylim([32, 43])
+ax.set_autoscalex_on(False)
+ax.set_xlim([-126, -112])
+plt.scatter(training_examples["longitude"],
+            training_examples["latitude"],
+            cmap="coolwarm",
+            c=training_targets["median_house_value"] / training_targets["median_house_value"].max())
+_ = plt.plot()
+
+------------------------------------------------------
+
+Task 3
+The data was not randomized which prevented the validation data from being a representative sample of the data and useful for validation.
+
+------------------------------------------------------
+
+Task 4
+# Setting up input funcitons
+
+# 1. Create input functions.
+    training_input_fn = lambda: my_input_fn(
+      training_examples, 
+      training_targets["median_house_value"], 
+      batch_size=batch_size)
+    predict_training_input_fn = lambda: my_input_fn(
+      training_examples, 
+      training_targets["median_house_value"], 
+      num_epochs=1, 
+      shuffle=False)
+    predict_validation_input_fn = lambda: my_input_fn(
+      validation_examples, validation_targets["median_house_value"], 
+      num_epochs=1, 
+      shuffle=False)
+
+# 2. Take a break and compute predictions.
+    training_predictions = linear_regressor.predict(input_fn=predict_training_input_fn)
+    training_predictions = np.array([item['predictions'][0] for item in training_predictions])
+    
+    validation_predictions = linear_regressor.predict(input_fn=predict_validation_input_fn)
+    validation_predictions = np.array([item['predictions'][0] for item in validation_predictions])]
+
+linear_regressor = train_model(
+    learning_rate=0.001,
+    steps=100,
+    batch_size=1,
+    training_examples=training_examples,
+    training_targets=training_targets,
+    validation_examples=validation_examples,
+    validation_targets=validation_targets
+
+RMSE: 170.94
+
+------------------------------------------------------
+
+Task 5
+
+california_housing_test_data = pd.read_csv("https://download.mlcc.google.com/mledu-datasets/california_housing_test.csv", sep=",")
+
+test_examples = preprocess_features(california_housing_test_data)
+test_targets = preprocess_targets(california_housing_test_data)
+
+predict_test_input_fn = lambda: my_input_fn(
+      test_examples, 
+      test_targets["median_house_value"], 
+      num_epochs=1, 
+      shuffle=False)
+
+test_predictions = linear_regressor.predict(input_fn=predict_test_input_fn)
+test_predictions = np.array([item['predictions'][0] for item in test_predictions])
+
+root_mean_squared_error = math.sqrt(
+    metrics.mean_squared_error(test_predictions, test_targets))
+
+print("Final RMSE (on test data): %0.2f" % root_mean_squared_error)
+
+Final RMSE: 161.09
+
+------------------------------------------------------
+
+b. 
+The training dataset is the data used to train the model while the testing dataset is the dataset 
+used to test the model's predictions. Keeping the two datasets separate during training is important 
+because testing on the training dataset gives higher scores that don't really show how well the 
+model is doing. Having a validation datset allows the model to look at a separate dataset and 
+refine its hyper parameters while also keeping the testing set separate. 
+
+
