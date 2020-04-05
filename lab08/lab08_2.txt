@@ -1,0 +1,53 @@
+Ex. 8.2
+
+a. The Pearson correlation coefficient measures the linear relationship between
+two variables. The coefficient is between 1 and -1. Population and households
+have a coefficient of 0.9 which makes sense because as the population
+increases, the number of households will also increase.
+
+b. 
+------------------------------------------------------------------------------------------
+
+Task 1
+#
+# Your code here: add your features of choice as a list of quoted strings.
+#
+minimal_features = ["median_income", "latitude", "rooms_per_person"]
+
+assert minimal_features, "You must select at least one feature!"
+
+minimal_training_examples = training_examples[minimal_features]
+minimal_validation_examples = validation_examples[minimal_features]
+
+#
+# Don't forget to adjust these parameters.
+#
+train_model(
+    learning_rate=0.001,
+    steps=500,
+    batch_size=5,
+    training_examples=minimal_training_examples,
+    training_targets=training_targets,
+    validation_examples=minimal_validation_examples,
+    validation_targets=validation_targets)
+
+RMSE: 165.35
+I think the baseline was 180 and this model has a lower value which is better. 
+------------------------------------------------------------------------------------------
+
+Task 2
+#
+# YOUR CODE HERE: Train on a new data set that includes synthetic features based on latitude.
+#
+def select_and_transform_features(source_df):
+  LATITUDE_RANGES = zip(range(32, 44), range(33, 45))
+  selected_examples = pd.DataFrame()
+  selected_examples["median_income"] = source_df["median_income"]
+  selected_examples["latitude"] = abs(source_df["latitude"] - 38)
+  return selected_examples
+
+selected_training_examples = select_and_transform_features(training_examples)
+selected_validation_examples = select_and_transform_features(validation_examples)
+
+RMSE: 130.11
+------------------------------------------------------------------------------------------
