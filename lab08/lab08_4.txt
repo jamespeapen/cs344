@@ -1,0 +1,15 @@
+Ex. 8.4
+
+a. The K-fold validation allows the model to be trained on the whole dataset
+while validating each fold with data it was not trained on. This improves the
+models accuracy more than if it was trained on just a subset of the data.
+
+b. Having widely different ranges due to outliers would affect the model
+because it would take those values into account even though they are not
+representative of the data and this would skew the model.
+
+c. Making a large network on a small dataset could cause overfitting because
+there is only a little training data available and only so much training that
+can reasonably be done. Using a smaller network reduces the overfitting.
+
+d. 
