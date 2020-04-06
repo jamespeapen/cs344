@@ -1,6 +1,9 @@
 Ex 8.3
 
-a. 
+a. FTRL is the Follow The Regularized Leader algorithm that can tweak the
+learning rate by evaluating the model. It uses the last best rate along with
+a regularization term that better adjusts the rate correction instead of 
+simply choosing the last best one.
 
 b.
 Bucketing converts continuous data into categorical data that can be turned into a feature vector and converted into one-hot representations for modelling.
