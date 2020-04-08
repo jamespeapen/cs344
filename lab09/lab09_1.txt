@@ -1,0 +1,24 @@
+Exercise 9.1
+
+a. The linear regression does not make useful predictions. The histogram shows
+that most of its predicts are between 0 and 0.25 while we would like a
+prediction as close to 0 or 1 as possible.
+
+b. L2 loss shows the squares of the residuals and tries to minimize it. In a
+classification model, the linear regression does not treat the predictions as
+binary classification, but a linear model and so does not do a good job of
+classifying.  LogLoss is the cross-entropy loss that measures loss as binary
+classsification errors and can penalize for classification errors and for
+confidence errors.
+
+c. The logistic regression has RMSE values that decrease over each training
+period while the linear regression had teh same error values for each period
+which means it was not learning. 
+
+d. 
+learning_rate = 0.00005
+steps = 50000
+batch_size = 2000
+AUC: 0.82
+Accuracy = 0.80
+
