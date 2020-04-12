@@ -1,8 +1,9 @@
 Exercise 9.2 
 
-a. We are regularizing with respect to sparcity because it reduces
-the number of parameter in the model allowing for better utilization
-of resources while maintaining performance and preventing overfitting.
+a. We are regularizing with respect to sparcity because it reduces the number
+of parameter in the model allowing for better utilization of resources while
+maintaining performance and preventing overfitting.
 
-b. L1 regularization increases sparcity by penalizing the absolute value of the weights and pushing some of the less meaningful parameter weights to 0.
-c. regularization_strength=0.8
+b. L1 regularization increases sparcity by penalizing the absolute value of the
+weights and pushing some of the less meaningful parameter weights to 0.  c.
+regularization_strength=0.8
