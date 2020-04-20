@@ -1,0 +1,12 @@
+Exercise 10.4
+
+a. The images are 150x150x3. It has depth 3 for RGB.  
+
+b. Both models have three
+layers of convolution and max-pooling. The cat-dog classifier, however, has a
+progression of 16, 32 and 64 filters while the class network had 32, 64, and 64
+for its first, second and third convolutions.
+
+c. The early stages had more features in the pictures like fur and color, but 
+the later layers only had outlines of the cat. 
+

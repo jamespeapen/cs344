@@ -1,0 +1,29 @@
+Exercise 10.2
+a. AdaGrad adaptively modifies the learning_rate for each coefficient in a model, 
+lowering the learning_rate overall.
+
+b. Task 1
+learning_rate = 0.007
+steps = 5000
+batch_size = 70
+hidden_units = [10, 10] 
+
+RMSE: 072.17 
+------------------------------------------------------------
+
+Task 2
+learning_rate = 0.5
+steps = 500
+batch_size = 100
+hidden_units = [10, 10]
+
+RMSE: 69.92
+------------------------------------------------------------
+
+Task 3
+learning_rate = 0.15 
+steps = 1000
+batch_size = 50
+hidden_units = [10, 10]
+
+RMSE: 68.94

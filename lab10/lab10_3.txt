@@ -1,0 +1,15 @@
+Exercise 10.3
+
+a. The confusion matrix shows, for each image, the predicted value and the
+proportion of real values that matched that prediction. It helps to see how
+well the model is predicting true labels. 
+
+b.  The Tensorflow model uses a neural network, but the model from class uses a
+convolutional neural network that doesn't just use the full image, but also
+captures information about parts of the images and how they relate to each
+other. I wasn't able to get the accuracy of the lab's network higher than 95%.
+
+c. The 10 step model plots look like noise without any discernable patterns
+while the 1000 step model has patterns emerging in the upper layers and all the
+plots in the deeper layers have patterns to them. Some of the plots have blurry 
+numbers in them. 

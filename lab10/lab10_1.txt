@@ -1,0 +1,10 @@
+Exercise 10.1
+
+a. Keras
+
+b. learning_rate = 0.01
+steps = 500
+batch_size = 10
+hidden_units = [10, 3] 
+
+RMSE: 121.87
