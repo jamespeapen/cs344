@@ -1,0 +1,17 @@
+Exercise 11.1
+
+a. A linear model may be preferable is the if the task is data and the patterns in it are simple enough to be fitted well 
+with a linear regression. Using a deep neural network for a simple problem would run the risk of overfitting and using more
+resources to run. 
+
+b. The neural network has around a 10% higher accuracy than the linear model and does not have much more overfitting. Both 
+models have similar training and testing accuracy scores. 
+
+c. With the embeddings, the neural network had a similar accuracy to the linear model. 
+
+d. disappointment and terrible are quite close together in the word vector plot and this makes sense because they are both 
+negative words and would be used in a negative review. 
+
+e. Learning rate = 0.2
+Accuracy = 0.85
+
