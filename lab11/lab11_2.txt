@@ -1,0 +1,27 @@
+Exercise 11.2
+
+a. Race: Within race, there is more data for White than for any other, and
+compared to White, others like American-Indian are extremely underrepresented.
+Gender: Similarly, males are more represented in the gender set than females
+and this skews the data.  Income: The data is biased towards incomes less than
+50K.  Native country: Bias towards United States Capital: Both capital gains
+and loss have over 90% zeros in them. The log plot shows that most people dont'
+have much capital gains, but there are some at the higher end of the gain
+spectrum who make gains.
+
+b.Looking at occupation against income bracket, colored by gender, you can see
+than most occupations in the lower income bracket are dominated by men while a
+few have more women. In the higher income bracker, all the categories are
+dominated by men. A model trained on this data would learn these patterns and
+if used to adivse policy, it could further propagate inequalites in gender and
+income.  
+
+c. 
+
+d. Looking at a matrix for race and comparing White and Black, there are more
+false negatives for income over 50K for Black than true positives. The model is
+not good at classifying Black income brackets because it is biased towards
+classifying them in a lower income bracket and gets it wrong more often than
+right. This pattern was there when looking at gender as well. Women were 
+predicted to earn less more often than they did in reality.
+
