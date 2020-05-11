@@ -1,0 +1,58 @@
+Exercise 13.2
+
+Given:
+rule 1: on(B, A)
+rule 2: on(C, B)
+rule 3: supports(C, table)
+rule 4: ∀x ∀y supports(X, Y) => on(Y, X)                    | ¬ supports(X, Y) ∨ on(Y, X)
+rule 5: ∀x ∀y on(X, Y) => above(X, Y)                       | ¬ on(X, Y) ∨ above(X, Y) 
+rule 6: ∀x ∀y ∀z above(X, Y) ∧ above(Y, Z) => above(X, Z)   | ¬ above(X, Y) ∧ ¬ above(Y, Z) ∧ above(X, Z)
+
+Prove: above(table, A)
+
+assuming ¬ above(table, A):
+
+¬ above(table, A) ∧ on(C, B) ∧ on(B, A) ∧ supports(C, table)
+
+    by rule 4:
+    if {X|C, Y|table}:
+    supports(C, table) ∧ ¬ supports(C, table) ∨ on(table, C)
+    -> on(table, C)
+
+¬ above(table, A) ∧ on(C, B) ∧ on(B, A) ∧ on(table, C)
+
+    by rule 5:
+    if {X|table, Y|C}:
+    on(table, C) ∧ ¬ on(table, C) ∨ above(C, table)
+    -> above(table, C)
+
+¬ above(table, A) ∧ on(C, B) ∧ on(B, A) ∧ above(table, C)
+    
+    by rule 5:
+    if {X|C, Y|B}:
+    on(C, B) ∧ ¬ on(C, B) ∨ above(C, B)
+    -> above(C, B)
+
+    by rule 5:
+    if {X|B, Y|A}:
+    on(B, A) ∧ ¬ on(B, A) ∨ above(B, A)
+    -> above(B, A)
+
+¬ above(table, A) ∧ above(C, B) ∧ above(B, A) ∧ above(table, C)
+
+    by rule 6:
+    if{X|C, Y|B, Z|A}:
+    above(C, B) ∧ above(B, A) ∧ ¬ above(C, B) ∧ ¬ above(B, A) ∨ above(C, A)
+    -> above(C, A)
+
+¬ above(table, A) ∧ above(C, A) ∧ above(table, C)
+    
+    by rule 6:
+    if{X|table, Y|C, Z|A}:
+    above(table, C) ∧ above(C, A) ∧ ¬ above(table, C) ∧ ¬ above(C, A) ∨ above(table, A)
+    -> above(table, A)
+
+¬ above(table, A) ∧ above(table, A)
+    -> contradiction
+    -> above(table, A)
+
