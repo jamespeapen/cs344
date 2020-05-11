@@ -4,9 +4,9 @@ Given:
 rule 1: on(B, A)
 rule 2: on(C, B)
 rule 3: supports(C, table)
-rule 4: ∀x ∀y supports(X, Y) => on(Y, X)                    | ¬ supports(X, Y) ∨ on(Y, X)
-rule 5: ∀x ∀y on(X, Y) => above(X, Y)                       | ¬ on(X, Y) ∨ above(X, Y) 
-rule 6: ∀x ∀y ∀z above(X, Y) ∧ above(Y, Z) => above(X, Z)   | ¬ above(X, Y) ∧ ¬ above(Y, Z) ∧ above(X, Z)
+rule 4: ∀x ∀y supports(X, Y) => on(Y, X)                    
+rule 5: ∀x ∀y on(X, Y) => above(X, Y)                       
+rule 6: ∀x ∀y ∀z above(X, Y) ∧ above(Y, Z) => above(X, Z)   
 
 CNFs of rules 4, 5, and 6
 ¬ supports(X, Y) ∨ on(Y, X)
