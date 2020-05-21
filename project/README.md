@@ -8,11 +8,11 @@ The goal of this project is to compare the different models and see what models 
 
 The dataset can be downloaded from [here](https://drive.google.com/file/d/1untjB6CcUpZBTAWJ8hYxvrVP_mW98fHA/view?usp=sharing).
 The code can be downloaded as the IPython notebook and run. It depends on the following packages:
-    - keras
-    - sklearn
-    - tensorflow 
-    - numpy as np  
-    - pandas as pd 
-    - matplotlib.pyplot 
-    - os
-    - time
+ - keras
+ - sklearn
+ - tensorflow 
+ - numpy as np  
+ - pandas as pd 
+ - matplotlib.pyplot 
+ - os
+ - time
