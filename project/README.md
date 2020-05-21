@@ -11,8 +11,8 @@ The code can be downloaded as the IPython notebook and run. It depends on the fo
  - keras
  - sklearn
  - tensorflow 
- - numpy as np  
- - pandas as pd 
+ - numpy 
+ - pandas
  - matplotlib.pyplot 
  - os
  - time
