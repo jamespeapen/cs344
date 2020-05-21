@@ -7,3 +7,13 @@ The model is based on an example by [Scarlat](https://www.kaggle.com/drscarlat/p
 The goal of this project is to compare the different models and see what models perform the best. After initial runs of the neural networks and the random forest, I decided to compare runtimes as well since the random forest took significantly less time to train than the neural networks.
 
 The dataset can be downloaded from [here](https://drive.google.com/file/d/1untjB6CcUpZBTAWJ8hYxvrVP_mW98fHA/view?usp=sharing).
+The code can be downloaded as the IPython notebook and run. It depends on the following packages:
+
+    - keras
+    - sklearn
+    - tensorflow 
+    - numpy as np  
+    - pandas as pd 
+    - matplotlib.pyplot 
+    - os
+    - time
